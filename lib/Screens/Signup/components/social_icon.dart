@@ -29,6 +29,9 @@ class SocalIcon extends StatelessWidget {
           iconSrc,
           height: 20,
           width: 20,
+          color: iconSrc == 'assets/icons/google-plus.svg'
+              ? Colors.red
+              : Colors.blue,
         ),
       ),
     );

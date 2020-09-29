@@ -18,18 +18,23 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "SIGNUP",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
             SizedBox(height: size.height * 0.03),
             SvgPicture.asset(
               "assets/icons/signup.svg",
               height: size.height * 0.35,
             ),
             RoundedInputField(
+              hintText: "First Name",
+              onChanged: (value) {},
+            ),
+            RoundedInputField(
+              hintText: "Last Name",
+              onChanged: (value) {},
+            ),
+            RoundedInputField(
               hintText: "Your Email",
               onChanged: (value) {},
+              icon: Icons.email,
             ),
             RoundedPasswordField(
               onChanged: (value) {},
@@ -42,7 +47,7 @@ class Body extends StatelessWidget {
             AlreadyHaveAnAccountCheck(
               login: false,
               press: () {
-               Navigator.of(context).pop();
+                Navigator.of(context).pop();
               },
             ),
             OrDivider(),
@@ -62,7 +67,8 @@ class Body extends StatelessWidget {
                   press: () {},
                 ),
               ],
-            )
+            ),
+            SizedBox(height: 10)
           ],
         ),
       ),
