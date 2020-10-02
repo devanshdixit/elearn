@@ -8,6 +8,7 @@ class SocalIcon extends StatelessWidget {
   const SocalIcon({
     Key key,
     this.iconSrc,
+    
     this.press,
   }) : super(key: key);
 

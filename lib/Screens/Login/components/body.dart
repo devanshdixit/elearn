@@ -1,3 +1,4 @@
+import 'package:elearn/Screens/Home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:elearn/Screens/Login/components/background.dart';
 import 'package:elearn/Screens/Signup/signup_screen.dart';
@@ -5,7 +6,7 @@ import 'package:elearn/components/already_have_an_account_acheck.dart';
 import 'package:elearn/components/rounded_button.dart';
 import 'package:elearn/components/rounded_input_field.dart';
 import 'package:elearn/components/rounded_password_field.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -35,7 +36,11 @@ class Body extends StatelessWidget {
             ),
             RoundedButton(
               text: "LOGIN",
-              press: () {},
+              press: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => Home(),
+                ));
+              },
             ),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(
