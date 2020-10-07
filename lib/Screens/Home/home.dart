@@ -1,3 +1,4 @@
+import 'package:elearn/Screens/profile/profile.dart';
 import 'package:elearn/constants.dart';
 import 'package:elearn/providers/pageProvider.dart';
 import 'package:elearn/utils/icons_.dart';
@@ -34,7 +35,6 @@ class _HomeState extends State<Home> {
           setState(() {
             activeIndex = index;
           });
-          print(index);
           Provider.of<PageProvider>(context, listen: false).changeIndex(index);
         },
         backgroundColor: kPrimaryLightColor,
@@ -48,9 +48,7 @@ class _HomeState extends State<Home> {
           ? Text("Home")
           : pageProvider.index == 1
               ? Text("Favourites")
-              : pageProvider.index == 2
-                  ? Text("My Courses")
-                  : Text("Profile"),
+              : pageProvider.index == 2 ? Text("My Courses") : Profile(),
     );
   }
 }

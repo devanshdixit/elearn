@@ -31,6 +31,10 @@ dependencies:
   flutter_svg:
   animated_bottom_navigation_bar: ^0.1.2+2
   provider:
+  animate_do: ^1.7.3
+  avatar_glow: ^1.2.0
+  font_awesome_flutter: ^8.8.1
+
 
 dev_dependencies:
   flutter_test:
