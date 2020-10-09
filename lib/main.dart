@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:elearn/constants.dart';
 import 'package:provider/provider.dart';
 
+import 'Screens/Home/home.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
           primaryColor: kPrimaryLightColor,
           scaffoldBackgroundColor: Colors.white,
         ),
-        home: LoginScreen(),
+        home: Home(),
       ),
     );
   }
